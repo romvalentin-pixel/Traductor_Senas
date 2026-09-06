@@ -1,0 +1,30 @@
+# Entorno virtual
+venv/
+.venv/
+
+# Variables de entorno
+.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Bases locales
+*.db
+*.sqlite
+*.sqlite3
+
+# Dataset
+dataset/*
+!dataset/.gitkeep
+
+# Modelos entrenados
+models_ai/*
+!models_ai/.gitkeep
+
+# IDE
+.vscode/
+
+# Windows
+Thumbs.db
