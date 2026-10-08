@@ -1,0 +1,57 @@
+# =============================================================================
+#  Archivos que NO se versionan
+# =============================================================================
+
+# Entorno y secretos
+.env
+*.env.local
+
+# Python
+__pycache__/
+*.py[cod]
+.venv*/
+.venv-ai/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Modelos generados (se regeneran con el pipeline de entrenamiento)
+*.pkl
+
+# Datasets/videos grandes (no versionar; LSA64 ~1.5-1.9 GB)
+ai/datasets/
+
+# Muestras capturadas con la web (datos de usuarios; no versionar)
+ai/dataset/argentine/*/*.json
+
+# Base de datos local de pruebas
+*.db
+*.sqlite3
+
+# Documentos de referencia pesados o con derechos de autor.
+# El PDF del señario LSA queda solo en local. Si el repositorio es privado y
+# tenés permiso para distribuirlo: git add -f "docs/material/Libro PDF Señario LSA Volumen 1.pdf"
+docs/material/*.pdf
+
+# Paquetes de entrega generados con `git bundle`
+*.bundle
+
+# Node / frontend
+node_modules/
+dist/
+coverage/
+.vite/
+.expo/
+.expo-export-test/
+
+# Logs
+*.log
+
+# IDE / sistema
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
