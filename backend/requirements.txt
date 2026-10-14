@@ -1,0 +1,38 @@
+# =============================================================================
+#  Traductor de Lenguaje de Señas — Backend (FastAPI)
+#  Archivo: backend/requirements.txt
+#  Instalación:  python -m venv .venv  →  .venv\Scripts\activate  →  pip install -r requirements.txt
+# =============================================================================
+#
+# Se usan rangos de versiones para soportar Python 3.11 a 3.14.
+# En producción se puede congelar con:  pip freeze > requirements.lock.txt
+
+fastapi>=0.115,<1.0
+uvicorn[standard]>=0.30,<1.0
+
+# Base de datos ORM
+sqlalchemy>=2.0,<3.0
+psycopg2-binary>=2.9
+
+# Validación y configuración
+pydantic>=2.8,<3.0
+pydantic-settings>=2.2,<3.0
+email-validator>=2.0
+python-multipart>=0.0.9
+
+# Seguridad
+python-jose[cryptography]>=3.3
+bcrypt>=4.0
+
+# IA
+numpy>=1.26,<3.0
+scikit-learn>=1.4
+
+# Procesamiento de imagen en el servidor (opcional, ver requirements-optional.txt)
+
+# Text-to-Speech
+gtts>=2.5
+
+# Testing
+pytest>=8.0
+httpx>=0.27
