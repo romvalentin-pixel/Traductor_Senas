@@ -1,0 +1,5 @@
+numpy==2.2.1
+scikit-learn==1.6.0
+opencv-python-headless==4.10.0.84
+# Descomentar si se quiere captura de landmarks server-side:
+# mediapipe==0.10.14
