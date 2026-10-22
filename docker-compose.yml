@@ -1,0 +1,68 @@
+# =============================================================================
+#  Sistema de Traducción de Lenguaje de Señas
+#  Levanta: PostgreSQL + Backend (FastAPI) + Frontend (React + nginx)
+#
+#  Uso:   docker compose up --build
+#  Acceso:
+#    - Frontend: http://localhost
+#    - Backend API / Swagger: http://localhost:8000/docs
+#    - PostgreSQL: localhost:5432 (postgres/postgres)
+# =============================================================================
+
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: sl-postgres
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
+      POSTGRES_DB: ${POSTGRES_DB:-sign_language}
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./database/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql:ro
+      - ./database/seed.sql:/docker-entrypoint-initdb.d/02-seed.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-postgres} -d ${POSTGRES_DB:-sign_language}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    networks:
+      - sl-net
+
+  backend:
+    build: ./backend
+    container_name: sl-backend
+    environment:
+      DATABASE_URL: postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB:-sign_language}
+      SECRET_KEY: ${SECRET_KEY:-cambiar-esta-clave-en-produccion}
+      ACCESS_TOKEN_EXPIRE_MINUTES: ${ACCESS_TOKEN_EXPIRE_MINUTES:-60}
+      CORS_ORIGINS: ${CORS_ORIGINS:-http://localhost,http://localhost:3000,http://localhost:8080}
+      AI_MODEL_PATH: ${AI_MODEL_PATH:-}
+      AI_MIN_CONFIDENCE: ${AI_MIN_CONFIDENCE:-0.45}
+      TTS_LANGUAGE: ${TTS_LANGUAGE:-es}
+    ports:
+      - "8000:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - sl-net
+
+  frontend:
+    build: ./frontend
+    container_name: sl-frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    networks:
+      - sl-net
+
+networks:
+  sl-net:
+    driver: bridge
+
+volumes:
+  pgdata:
