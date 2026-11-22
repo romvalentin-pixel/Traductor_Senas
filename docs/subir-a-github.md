@@ -4,8 +4,12 @@ Guía para publicar el repositorio, mostrar el avance por etapas y volver a
 versiones anteriores. El proyecto se inicializó con Git el **2026-11-15** con un
 historial reconstruido a partir de la bitácora.
 
-> **Importante:** este repositorio **todavía no tiene remoto**. Los commits y
-> las etiquetas existen solo en tu computadora hasta que hagas el `push`.
+> **Estado:** el proyecto se publicó en
+> <https://github.com/romvalentin-pixel/Traductor_Senas>. La rama `main` conserva
+> el historial anterior del repositorio junto con el historial local reconstruido.
+> Las etiquetas locales no aparecen en GitHub salvo que se publiquen expresamente.
+> Los pasos de creación y publicación siguientes se conservan como referencia para
+> otros repositorios; no hace falta volver a crear `origin` en este proyecto.
 
 ---
 
@@ -42,7 +46,9 @@ git log --oneline --decorate --graph
 git tag -n
 ```
 
-Vas a ver ocho commits, cada uno con su etiqueta:
+El historial reconstruido contiene ocho commits agrupados por área, con estas
+etiquetas locales. Puede haber commits posteriores, incluido el de integración
+con el historial anterior de GitHub:
 
 | Etiqueta | Fecha | Contenido |
 |---|---|---|
