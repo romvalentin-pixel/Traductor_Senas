@@ -6,6 +6,10 @@ que corre MediaPipe en el navegador y funciona tanto en computadora como en
 celular. La app móvil Expo/React Native se conserva como cliente **opcional y
 experimental**.
 
+Repositorio: <https://github.com/romvalentin-pixel/Traductor_Senas>.
+El historial incluye commits reconstruidos por áreas; sus fechas anteriores son
+aproximadas y no representan necesariamente versiones históricas exactas.
+
 > **Alcance real:** el reconocimiento incluido es un **modo demostración** con
 > plantillas sintéticas de 9 señas. No debe presentarse como un modelo entrenado
 > con LSA real. El flujo (login, traducción, historial) está implementado y
