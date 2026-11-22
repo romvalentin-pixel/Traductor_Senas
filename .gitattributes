@@ -1,0 +1,29 @@
+# Normaliza los saltos de línea a LF en el repositorio y los deja como estén
+# en el working tree de cada sistema.
+* text=auto eol=lf
+
+# Código y documentación
+*.py    text eol=lf
+*.js    text eol=lf
+*.jsx   text eol=lf
+*.ts    text eol=lf
+*.tsx   text eol=lf
+*.json  text eol=lf
+*.md    text eol=lf
+*.yml   text eol=lf
+*.yaml  text eol=lf
+*.sql   text eol=lf
+*.css   text eol=lf
+*.html  text eol=lf
+*.ps1   text eol=crlf
+
+# Binarios
+*.pkl   binary
+*.pdf   binary
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.ico   binary
+*.woff  binary
+*.woff2 binary

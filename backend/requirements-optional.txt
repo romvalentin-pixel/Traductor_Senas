@@ -1,0 +1,12 @@
+# Dependencias opcionales.
+#
+# El flujo principal (web) corre MediaPipe en el navegador y no necesita nada
+# de esto. Instalar solo si se usa la ruta server-side de imágenes:
+#
+#     pip install -r requirements-optional.txt
+#
+# Esa ruta la usa la app móvil al enviar `image_base64` y requiere además
+# `mediapipe` instalado en el servidor.
+
+opencv-python-headless>=4.8
+mediapipe>=0.10
