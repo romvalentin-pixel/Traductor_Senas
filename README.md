@@ -10,6 +10,12 @@ Repositorio: <https://github.com/romvalentin-pixel/Traductor_Senas>.
 El historial incluye commits reconstruidos por áreas; sus fechas anteriores son
 aproximadas y no representan necesariamente versiones históricas exactas.
 
+### Integrantes
+
+- Romano Jesús Valentín
+- Salomón Riveras José Alejandro
+- Varela Miguel Marcelo
+
 > **Alcance real:** el reconocimiento incluido es un **modo demostración** con
 > plantillas sintéticas de 9 señas. No debe presentarse como un modelo entrenado
 > con LSA real. El flujo (login, traducción, historial) está implementado y
@@ -427,7 +433,6 @@ Pipeline y uso: [`ai/README.md`](ai/README.md).
 - [Cómo agregar o cargar más señas](docs/como-agregar-mas-senas.md)
 - [Pruebas y errores](docs/pruebas-y-errores.md)
 - [Bitácora del proyecto](docs/bitacora.md)
-- [Subir a GitHub por partes](docs/subir-a-github.md)
 - [Análisis de limpieza y mejoras](docs/analisis-limpieza-y-mejoras.md)
 - [Referencia LSA64](docs/lsa64-referencia.md)
 - [App móvil (opcional)](mobile/README.md)
@@ -452,9 +457,9 @@ git log --oneline --decorate --graph
 git tag -n
 ```
 
-El detalle de cada etapa, cómo subirlo a GitHub por partes, crear releases y
-volver a una versión anterior está en
-[`docs/subir-a-github.md`](docs/subir-a-github.md).
+Las fechas de estas etapas son aproximadas y no representan instantáneas
+históricas exactas. El repositorio también conserva el historial anterior de
+GitHub y los cambios posteriores a la reconstrucción.
 
 ---
 

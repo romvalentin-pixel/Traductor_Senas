@@ -386,8 +386,6 @@ esta bitácora: ocho commits agrupados por área, cada uno con su etiqueta.
 Las fechas son aproximadas y los commits **no** son una copia exacta del código
 de cada fecha. Solo `v1.0.0` está verificado con las suites actuales.
 
-- Cómo subirlo, crear releases y volver a una versión anterior:
-  [`subir-a-github.md`](subir-a-github.md).
 - Script que genera el historial:
   [`../scripts/crear-historial-git.ps1`](../scripts/crear-historial-git.ps1).
 - Bitácora original desde cero:

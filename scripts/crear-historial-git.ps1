@@ -128,7 +128,6 @@ New-Stage -Tag 'v1.0.0' -Date '2026-11-15T12:00:00-03:00' `
         'README.md',
         'CHANGELOG.md',
         'docs/README.md',
-        'docs/subir-a-github.md',
         'docs/archivo/bitacora-v1-original.md',
         'scripts/crear-historial-git.ps1'
     )

@@ -36,7 +36,6 @@ opcional. El backend es FastAPI con PostgreSQL o SQLite.
 | Documento | Contenido |
 |---|---|
 | [`bitacora.md`](bitacora.md) | Cronología del proyecto: punto de partida, auditoría, móvil, grabador y limpieza |
-| [`subir-a-github.md`](subir-a-github.md) | Publicar el repositorio, subirlo por partes, releases y volver a versiones viejas |
 | [`analisis-limpieza-y-mejoras.md`](analisis-limpieza-y-mejoras.md) | Diagnóstico y plan de limpieza; marca qué fases ya se aplicaron |
 | [`../CHANGELOG.md`](../CHANGELOG.md) | Resumen de cambios relevantes del proyecto |
 
